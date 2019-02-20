@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@import "./variable.scss";
+@mixin btn($size:14px, $color:$theme-green, $bdColor:$theme-green, $bgcolor:transparent, $padding:3px 15px, $radius:5px) {
+    padding: $padding;
+    background-color: $bgcolor;
+    border-radius: $radius;
+    border: 1px solid $bdColor;
+    color: $color;
+    text-align: center;
+    display: inline-block;
+    &.router-link-active {
+        background-color: $theme-green;
+        color: #fff;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+// 文字多余隐藏
+@mixin fontoVerflow {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// home页面的公共样式
+@mixin commonStyle($width:25%, $height:330px, $borderRadius:8px) {
+    display: inline-block;
+    width: $width;
+    height: $height;
+    background: $bg-color;
+    border-radius: $borderRadius;
+    vertical-align: top;
+}
+
+// 文件列表展示
+@mixin cellList($height:80px, $bdColor:$border-color) {
+    display: flex;
+    align-items: center;
+    height: $height;
+    border-top: 1px solid $bdColor;
+    padding: 5px 0;
+    margin: 0 20px;
+}
+//按钮组样式
+@mixin btnGroup(){
+    color: $font-light-color;
+    >li{ 
+        i{
+            padding-right: 5px;
+        }
+        display: inline-block;
+        padding: 0 8px;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+//清除浮动
+@mixin clearFlot(){
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}

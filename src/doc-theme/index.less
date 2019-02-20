@@ -1,0 +1,34 @@
+@charset "utf-8";
+/*
+ * @Author: chengshanshan 
+ * @Date: 2018-07-23 16:26:23 
+ * @Last Modified by: chengshanshan
+ * @Last Modified time: 2018-07-26 11:04:43
+ * @instruction：自定义iview主题
+ */
+@import '~iview/src/styles/index.less';
+
+@font-size-small:13px;
+@primary-color:#2dd6aa;
+
+// 重置table样式
+@table-thead-bg:transparent;
+@table-td-hover-bg            : #f7f7f7;
+@table-td-highlight-bg        : #f7f7f7;
+.ivu-table-wrapper{
+    border: none;
+}
+.ivu-table{
+    th{
+        border-top: 1px solid #e9eaec
+    }
+    td{
+        border-bottom: none;
+    }
+    &:after{
+        height: 0;
+        background-color: transparent;
+    }
+}
+
+
